@@ -1,3 +1,6 @@
+Only small ui change
+<img src="https://i.imgur.com/owXEfqP.png">
+
 # Aux-Revamped
 
 * A refreshed and transparent UI update for the classic Aux auction addon.
