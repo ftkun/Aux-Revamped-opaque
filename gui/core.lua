@@ -115,19 +115,20 @@ end
 
 -- FRAME SETTINGS
 function M.set_frame_style(frame, backdrop_color, border_color, left, right, top, bottom)
-	frame:SetBackdrop({
-		bgFile = [[Interface\Tooltips\UI-Tooltip-Background]],
-		edgeFile = [[Interface\Tooltips\UI-Tooltip-Border]],
-		edgeSize = 11,
-		tile = true,
-		insets = { left = 3, right = 3, top = 3, bottom = 3 }
-	})
+	frame:SetBackdrop{
+		bgFile=[[Interface\Buttons\WHITE8X8]],
+		edgeFile=[[Interface\Buttons\WHITE8X8]],
+		edgeSize=1.5,
+		tile=true,
+		insets={left=left, right=right, top=top, bottom=bottom}
+	}
+	frame:SetAlpha(1)
 
 	local br, bg, bb, ba = backdrop_color()
-	frame:SetBackdropColor(0.2, 0.2, 0.2, 1)
+	frame:SetBackdropColor(br, bg, bb, 1)
 
 	local er, eg, eb, ea = border_color()
-	frame:SetBackdropBorderColor(0.4, 0.4, 0.4, 1)
+	frame:SetBackdropBorderColor(er, eg, eb, 1)
 end
 -- END OF FRAME SETTINGS
 
